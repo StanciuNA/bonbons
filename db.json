@@ -1,0 +1,38 @@
+{
+    "products":[
+        {
+            "id" : 0,
+            "label" : "Coca cola gummy"
+        },
+
+        {
+            "id" : 1,
+            "label" : "Milka chocolate"
+
+        },
+
+        {
+            "id" : 2,
+            "label" : "Kinder bueno dark"
+
+        },
+
+        {
+            "id" : 3,
+            "label" : "Kinder bueno light"
+
+        }
+    ],
+    "auth":[
+        {
+            "id": 0,
+            "email" : "alibibibaba@email.com",
+            "password" : "m3g@53cur3P@ssw0rd"
+        },
+        {
+            "id": 1,
+            "email" : "admin@email.com",
+            "password" : "admin"
+        }
+    ]
+}
