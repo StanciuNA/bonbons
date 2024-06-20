@@ -9,18 +9,38 @@
 
         {
             "id" : 1,
-            "label" : "Milka chocolate"
+            "label" : "Milka chocolate",
+            "price" : 40,
+            "description": "Description 1"
         },
 
         {
             "id" : 2,
-            "label" : "Kinder bueno dark"
+            "label" : "Kinder bueno dark",
+            "price" : 205,
+            "description": "Description 1"
         },
 
         {
             "id" : 3,
-            "label" : "Kinder bueno light"
-        }
+            "label" : "Kinder bueno light",
+            "price" : 305,
+            "description": "Description 1"
+        },
+
+        {
+          "id" : 4,
+          "label" : "Sucre non sucré",
+          "price" : 999,
+          "description": "Description 1"
+        },
+
+        {
+          "id" : 3,
+          "label" : "Sables",
+          "price" : 432,
+          "description": "Description nanananan"
+      }
     ],
     "auth":[
         {

@@ -11,23 +11,16 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductsComponent {
 
-  @Input()
-  title = ""
-  @Input()
-  description = "";
-  @Input()
-  price = "";
-  @Input()
-  image = "";
-
-  list_of_products = null
+  list_of_products = [];
 
   constructor(public productsService : ProductsService){
-    this.getProducts()
+    this.getProducts().subscribe((data: any) => {
+      this.list_of_products = data;
+      console.log(this.list_of_products);
+    });
   }
 
   getProducts(){
-
     return this.productsService.getProducts();
   }
 }

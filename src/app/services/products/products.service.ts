@@ -14,7 +14,6 @@ export class ProductsService {
 
   url = "http://localhost:3000/products";
 
-
   getProducts(): any {
     return this.http.get(this.url)
   }
