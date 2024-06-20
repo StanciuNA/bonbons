@@ -1,19 +1,33 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { ProductsService } from '../../services/products/products.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
 
-  constructor(private products : ProductsService){
+  @Input()
+  title = ""
+  @Input()
+  description = "";
+  @Input()
+  price = "";
+  @Input()
+  image = "";
 
-    this.products.getProducts();
+  list_of_products = null
 
+  constructor(public productsService : ProductsService){
+    this.getProducts()
   }
 
+  getProducts(){
+
+    return this.productsService.getProducts();
+  }
 }

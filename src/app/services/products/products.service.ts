@@ -14,9 +14,8 @@ export class ProductsService {
 
   url = "http://localhost:3000/products";
 
-  getProducts(){
-    this.http.get(this.url).subscribe((data : any) =>{
-      console.log(data);
-    })
+
+  getProducts(): any {
+    return this.http.get(this.url)
   }
 }

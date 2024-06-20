@@ -2,7 +2,9 @@
     "products":[
         {
             "id" : 0,
-            "label" : "Coca cola gummy"
+            "label" : "Coca cola gummy",
+            "price" : 20,
+            "description": "Description 1"
         },
 
         {
