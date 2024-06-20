@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Products</a>
+              <a class="nav-link active" aria-current="page" routerLink="products" routerLinkActive="active">Products</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Services</a>
@@ -20,14 +20,19 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Create your own candy</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="login" routerLinkActive="active" ariaCurrentWhenActive="page">Log in</a>
-            </li>
           </ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" style="margin-right: 25px;">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
+          <div class="avatar-box" routerLink="login" routerLinkActive="active">
+            <p-avatar 
+              image="/assets/images/icons8-utilisateur-64.png" 
+              styleClass="mr-2" 
+              size="large"
+            />
+            <span>{{user}}</span>
+          </div>
         </div>
       </div>
     </nav>
