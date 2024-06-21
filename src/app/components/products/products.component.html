@@ -7,7 +7,7 @@
   <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let product of list_of_products">
           <div class="card mb-4">
-              <img [src]="product['image']" class="card-img-top" alt="Product image">
+              <img [src]="'assets/images/'+product['image']" class="card-img-top" alt="Product image">
               <div class="card-body">
                   <h5 class="card-title">{{ product['label'] }}</h5>
                   <div class="container ms-10">
@@ -16,16 +16,22 @@
                   <div class="d-flex align-items-center">
                       <a [href]="product['id']" class="btn btn-primary">Buy</a>
                       <div class="quantity ms-3">
-                          <a class="quantity__minus"><span>-</span></a>
-                          <input name="quantity" type="text" class="quantity__input" value="1">
-                          <a class="quantity__plus"><span>+</span></a>
+                          <a class="quantity__minus" (click)="decrement(product)"><span>-</span></a>
+                          <input name="quantity" type="text" class="quantity__input" value="{{product['quantity']}}">
+                          <a class="quantity__plus" (click)="increment(product)"><span>+</span></a>
                       </div>
                   </div>
               </div>
           </div>
       </div>
   </div>
+  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10]">
+  </mat-paginator>
 </div>
+
+
 
 
 
